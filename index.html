@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <div class="loading--container">
+        <svg class="cursor-scale" width="180" height="139" viewBox="0 0 180 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="signature" d="M40 122C43.8442 122 48.5113 127.086 51.7778 121.778C54.634 117.136 50.6417 107.275 48 103.444C39.6566 91.3465 34.6001 76.8309 27.4445 64C20.2118 51.031 16.6976 36.3982 10.6667 22.8889C9.60844 20.5184 10.1782 19.3182 12.6111 21.2222C16.9418 24.6114 19.8345 29.9619 23.2222 34.2222C32.7656 46.2237 43.789 57.8456 54.1667 69.1667C60.4117 75.9794 66.1021 83.2765 73.2222 89.2222C76.1219 91.6436 81.0787 94.0821 83 97.4444C83.8109 98.8635 90.8799 104.402 91 102C91.3825 94.3502 87.825 88.6996 85.5556 81.7778C83.1375 74.4027 76.5469 66.2285 72.1111 59.9444C69.2927 55.9517 68.8774 50.5872 66.4445 46.2222C64.8269 43.3202 62.8656 40.2956 62.0556 37.0556C60.0373 28.9826 55.4306 22.1536 53 14.2222C52.3722 12.1737 48.5572 1.71247 45.7778 2C39.5407 2.64521 32.6231 11.525 27.8889 15.1667C20.2238 21.0629 14.5523 29.6145 7.8889 36.5556C2.92344 41.7279 1.57582 44.7888 2.00001 52C2.40053 58.8088 9.69323 62 15.4445 62C27.5351 62 39.3603 60 51.4445 60C66.0549 60 80.7323 59.5507 95.3333 60C103.164 60.2409 108.914 73.4172 109.944 79.9444C110.653 84.4332 111.13 88.8947 111 93.4444C110.818 99.8192 105.774 103.711 100.944 107.333C91.0375 114.764 79.6319 115.188 67.7778 115C55.8549 114.811 50.7328 104.362 49.7778 93.7778C48.7209 82.064 48.8727 71.4006 62.0556 67.5556C68.9048 65.5579 76.5554 66.0157 80.5556 72.1111C87.7627 83.0934 86.1505 96.0476 78.2222 105.778C68.6067 117.579 52.8154 120.531 40.4445 128C38.0207 129.463 36.513 129.797 33.7778 130C31.7225 130.152 31.7251 132.663 30.5556 134C29.3084 135.425 31.0408 136.201 32 137C33.6908 138.409 38.3652 135.145 40.0556 134.389C46.7989 131.372 51.98 125.757 58.7222 122.611C71.6433 116.581 85.5131 112.115 98.6667 106.556C117.767 98.4821 136.823 90.0581 156.222 82.7222C163.431 79.9963 170.915 78.0366 178 75" stroke="#9e0a9e" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <div class="loading--text cursor-scale">   
+            <p>And he had no clue how</p>
+            <p>preloaders became a cool thing</p>
+        </div>
+    </div>
+    <div class="cursor"></div>
+    <section class="section first" id="firstSection">
+        <nav class="navbar--container">
+            <div class="navbar--logo">
+                <p class="cursor-none cursor-scale">Neellohit Senapati</p>
+            </div>
+            <div class="navbar--icons">
+                <img src="./assets/mail.svg" alt="mail" class="cursor-small cursor-scale">
+                <img src="./assets/codepen.svg" alt="codepen" class="cursor-small cursor-scale">
+                <img src="./assets/linkedin.svg" alt="linkedin" class="cursor-small cursor-scale">
+                <img src="./assets/github.svg" alt="github" class="cursor-small cursor-scale">
+            </div>
+            <div class="navbar--logo">
+                <a href="/about.html" class="cursor-none cursor-scale">About Me</a>
+                <span></span>
+            </div>
+        </nav>
+        <div class="hero--container">
+            <div class="hero--header--a">
+                <h1 class="cursor-scale">creative designer &</h1>
+            </div>
+            <div class="hero--header--b">
+                <h1 class="cursor-scale">web developer</h1>
+                <div class="hero--eye cursor-scale cursor-none">
+                    <div class="hero--eyeball"></div>
+                </div>
+            </div>
+            <div class="hero--scroll--icon">
+                <div class="spin">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section second">
+        <div class="project--header">
+            <p class="cursor-scale">selected work</p>
+        </div>
+        <div class="section--separator"></div>
+        <div class="project--item project--a">
+            <div class="project--pointer" id="firstPointer">
+                <svg viewBox="0 0 95 50" class="svg--pointer">
+                    <path stroke = "black" stroke-width="1" d="M0 28 h87" fill="none"/>
+                    <circle id="svg--circle" stroke="black" stroke-width="1" cx="90" cy="28" r="3" fill="black"/>
+                </svg>
+                <svg viewBox="0 0 7.5 25" class="svg--pointer--small">
+                    <path stroke = "black" stroke-width="0.25" d="M0 14 h6" fill="none"/>
+                    <circle id="svg--circle" stroke="black" stroke-width="0.25" cx="6.25" cy="14" r="0.25" fill="black"/>
+                </svg>
+            </div>
+            <div class="project--content" id="firstContent">
+                <p class="project--content--name cursor-none cursor-scale">state of covid 2021</p>
+                <p class="project--content--stack cursor-none cursor-scale">React, AJAX, Axios</p>
+                <img class="project--content--img" src="./assets/stateofcovid.gif" alt=""/>
+            </div>
+        </div>
+        <div class="project--item project--b">
+            <div class="project--pointer" id="secondPointer">
+                <svg viewBox="0 0 95 50" class="svg--pointer">
+                    <path stroke = "black" stroke-width="1" d="M0 28 h87" fill="none"/>
+                    <circle id="svg--circle" stroke="black" stroke-width="1" cx="90" cy="28" r="3" fill="black"/>
+                </svg>
+                <svg viewBox="0 0 7.5 25" class="svg--pointer--small">
+                    <path stroke = "black" stroke-width="0.25" d="M0 14 h6" fill="none"/>
+                    <circle id="svg--circle" stroke="black" stroke-width="0.25" cx="6.25" cy="14" r="0.25" fill="black"/>
+                </svg>
+            </div>
+            <div class="project--content" id="secondContent">
+                <p class="project--content--name cursor-none cursor-scale">beetlenut solutions</p>
+                <p class="project--content--stack cursor-none cursor-scale">React, NodeJS, MySQL, Socket IO</p>
+                <img class="project--content--img" src="./assets/beetlenuts.gif" alt=""/>
+            </div>
+        </div>
+        <div class="project--item project--c">
+            <div class="project--pointer" id="thirdPointer">
+                <svg viewBox="0 0 95 50" class="svg--pointer">
+                    <path stroke = "black" stroke-width="1" d="M0 28 h87" fill="none"/>
+                    <circle id="svg--circle" stroke="black" stroke-width="1" cx="90" cy="28" r="3" fill="black"/>
+                </svg>
+                <svg viewBox="0 0 7.5 25" class="svg--pointer--small">
+                    <path stroke = "black" stroke-width="0.25" d="M0 14 h6" fill="none"/>
+                    <circle id="svg--circle" stroke="black" stroke-width="0.25" cx="6.25" cy="14" r="0.25" fill="black"/>
+                </svg>
+            </div>
+            <div class="project--content" id="thirdContent">
+                <p class="project--content--name cursor-none cursor-scale">the stegosaurus</p>
+                <p class="project--content--stack cursor-none cursor-scale">ThreeJS, WebGI, GSAP</p>
+                <img class="project--content--img" src="./assets/stegosaurus.gif" alt=""/>
+            </div>
+        </div>
+        <div class="project--item project--d">
+            <div class="project--pointer" id="fourthPointer">
+                <svg viewBox="0 0 95 50" class="svg--pointer">
+                    <path stroke = "black" stroke-width="1" d="M0 28 h87" fill="none"/>
+                    <circle id="svg--circle" stroke="black" stroke-width="1" cx="90" cy="28" r="3" fill="black"/>
+                </svg>
+                <svg viewBox="0 0 7.5 25" class="svg--pointer--small">
+                    <path stroke = "black" stroke-width="0.25" d="M0 14 h6" fill="none"/>
+                    <circle id="svg--circle" stroke="black" stroke-width="0.25" cx="6.25" cy="14" r="0.25" fill="black"/>
+                </svg>
+            </div>
+            <div class="project--content" id="fourthContent">
+                <p class="project--content--name cursor-none cursor-scale">PACE Academics</p>
+                <p class="project--content--stack cursor-none cursor-scale">React, NodeJS, NodeMailer, PostgreSQL</p>
+                <img class="project--content--img" src="./assets/paceacademics.gif" alt=""/>
+            </div>
+        </div>
+        <div class="project--item project--e">
+            <div class="project--pointer" id="fifthPointer">
+                <svg viewBox="0 0 95 50" class="svg--pointer">
+                    <path stroke = "black" stroke-width="1" d="M0 28 h87" fill="none"/>
+                    <circle id="svg--circle" stroke="black" stroke-width="1" cx="90" cy="28" r="3" fill="black"/>
+                </svg>
+                <svg viewBox="0 0 7.5 25" class="svg--pointer--small">
+                    <path stroke = "black" stroke-width="0.25" d="M0 14 h6" fill="none"/>
+                    <circle id="svg--circle" stroke="black" stroke-width="0.25" cx="6.25" cy="14" r="0.25" fill="black"/>
+                </svg>
+            </div>
+            <div class="project--content" id="fifthContent">
+                <p class="project--content--name cursor-none cursor-scale">site you are on</p>
+                <p class="project--content--stack cursor-none cursor-scale">Loads of Love & Lots of Effort</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact--section">
+        <div class="contact--left">
+            <div class="meditation--img cursor-scale">
+                <img src="./assets/meditation.gif" alt=""/>
+            </div>
+            <div class="contact--personal--container">
+                <div class="contact--mail cursor-scale cursor-none">
+                <p id="emailID">neellohitsenapati626@gmail.com</p>
+                <button onclick="copyMail()" id="copyBtn">
+                    <img src="./assets/copy.svg" alt="Copy">
+                </button>
+                </div>
+            </div>
+        </div>
+        <div class="contact--right">
+            <p class="contact--right-a">Something in your mind?</p>
+            <p class="contact--right-b">Let's Talk</p>
+            <form class="contact--form cursor-none cursor-scale">
+                <input type="email" name="" id="" placeholder="Your email">
+                <textarea placeholder="Drop me a message" rows="5"></textarea>
+                <input type="submit" value="send"/>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <a href="https://www.flaticon.com/free-icons/cursor" title="cursor icons">Cursor icons created by Cuputo & Freepik- Flaticon</a>
+        <p>2022 &copy; by Neellohit Senapati. All rights reserved</p>
+        <p style="cursor: url(./assets/blackpointer.png),pointer;" id="backtotop">back to top &uparrow;</p>
+    </footer>
+    <div class="project--tab--container">
+        <div class="project--tab">
+            <div class="project--tab-img">
+                <img src="./assets/stateofcovid.gif" alt="State of COVID 2021"/>
+            </div>
+            <div class="project--tab-name">
+                <p>state of covid 2021</p>
+            </div>
+            <div class="project--tab-txt">
+                flsjdlfjs
+            </div>
+            <div class="project--tab-links">
+                <button id="closeA"><img src="./assets/x.svg" alt="">
+                </button>
+                <a href=""><img src="./assets/githubgreen.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="project--tab--container">
+        <div class="project--tab">
+            <div class="project--tab-img">
+                <img src="./assets/beetlenuts.gif" alt="State of COVID 2021"/>
+            </div>
+            <div class="project--tab-name">
+                <p>beetlenut solutions</p>
+            </div>
+            <div class="project--tab-txt">
+                flsjdlfjs
+            </div>
+            <div class="project--tab-links">
+                <button id="closeB"><img src="./assets/x.svg" alt="">
+                </button>
+                <a href=""><img src="./assets/githubgreen.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="project--tab--container">
+        <div class="project--tab">
+            <div class="project--tab-img">
+                <img src="./assets/stegosaurus.gif" alt="State of COVID 2021"/>
+            </div>
+            <div class="project--tab-name">
+                <p>the stegosaurus</p>
+            </div>
+            <div class="project--tab-txt">
+                flsjdlfjs
+            </div>
+            <div class="project--tab-links">
+                <button id="closeC"><img src="./assets/x.svg" alt="">
+                </button>
+                <a href=""><img src="./assets/githubgreen.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="project--tab--container">
+        <div class="project--tab">
+            <div class="project--tab-img">
+                <img src="./assets/paceacademics.gif" alt="State of COVID 2021"/>
+            </div>
+            <div class="project--tab-name">
+                <p>pace academics</p>
+            </div>
+            <div class="project--tab-txt">
+                flsjdlfjs
+            </div>
+            <div class="project--tab-links">
+                <button id="closeD"><img src="./assets/x.svg" alt="">
+                </button>
+                <a href=""><img src="./assets/globe.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <section class="sidebar--container">
+        <ul>
+            <li><img src="./assets/mail.svg" alt="mail"/></li>
+            <li><img src="./assets/codepen.svg" alt="codepen"/></li>
+            <li><img src="./assets/linkedin.svg" alt="linkedin"/></li>
+            <li><img src="./assets/github.svg" alt="github"/></li>
+        </ul>
+    </section>
+    <script src="loadcursorscript.js"></script>
+    <script src="scrollscript.js"></script>
+    <script src="clickscript.js"></script>
+</body>
+</html>

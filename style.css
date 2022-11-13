@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Libre+Bodoni&family=Lobster+Two&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Libre+Bodoni&family=Lobster+Two:wght@400&family=Parisienne&display=swap');
 
 *{
     margin: 0;
@@ -25,6 +25,14 @@ body{
     transition: transform 1s ease;
     display: grid;
     place-items: center;
+}
+@keyframes loader{
+    from{
+        clip-path: circle(150% at 100% 100%);
+    }
+    to{
+        clip-path: circle(0% at 100% 100%);
+    }
 }
 .loading--text{
     color: #a2eb35;
@@ -117,6 +125,9 @@ body{
     justify-content: flex-end;
     gap: 2em;
     align-items: center;
+}
+.navbar--icons a{
+    cursor: url('/assets/blackpointer.png'),pointer;
 }
 
 .hero--container{
@@ -416,21 +427,23 @@ footer p:nth-child(3){
     backdrop-filter: blur(20px);
     width: 100%;
     padding: 20px;
+    display: grid;
     place-items: center;
     z-index: 6;
-    display: none;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
     
 }
 .project--tab{
     background-color: #100f0f;
     width: 100%;
-    max-width: 480px;
-    height: 640px;
+    max-width: 560px;
+    height: 720px;
     border-radius: 20px;
     padding: 15px 10px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 25px;
     overflow: hidden;
     position: relative;
     -webkit-box-shadow: 10px 10px 25px 0px rgba(148,146,142,1);
@@ -446,19 +459,26 @@ footer p:nth-child(3){
 }
 .project--tab-name{
     text-align: center;
-    color: #f7e3a8;
+    color: #fb7667;
     font-family: 'EB Garamond',serif;
-    font-size: 2em;
+    font-size: 2.4em;
     text-transform: uppercase;
+}
+.project--tab-txt{
+    color: #b0f9b6;
+    font-size: 1.25em;
+    font-family: sans-serif;
+    margin: 0 1em;
+
 }
 .project--tab-links{
     display: flex;
     gap: 20px;
     justify-content: center;
     position: absolute;
-    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
+    bottom: 15px;
 }
 .project--tab-links button,.project--tab-links a{
     background-color: #100f0f;
@@ -477,63 +497,7 @@ footer p:nth-child(3){
              9px -9px 18px #1a1818;
     cursor: url('./assets/blackpointer.png'), pointer;
 }
-.about--header{
-    width: 100%;
-    padding: 1em;
-    font-size: 84px;
-    display: grid;
-    justify-items: center;
-}
-.about--header p{
-    text-transform: uppercase;
-    font-weight: 800;
-}
-.about--header p span{
-    background-image: url(./assets/textBG.gif);
-    font-weight: 900;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: cover;
-}
-.about--container{
-    min-height: 70vh;
-    width: 100%;
-    display: flex;
-    padding: 2em;
-}
-.about--man{
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    width: 30%;
-    padding: 1em 0;
-}
-.about--content{
-    width: 70%;
-    padding: 1em 2em;
-    font-size: 24px;
-}
-.about--man img{
-    width: 500px;
-    margin-top: 40px;
-}
-#mess--head{
-    position: absolute;
-    width: 180px;
-    top: -16%;
-    left: 42.5%;
-}
-#messA{
-    stroke-dasharray: 4316;
-    stroke-dashoffset: 4316;
-    animation: messy 0.5s ease forwards infinite alternate;
-}
-#messB{
-    stroke-dasharray: 4525;
-    stroke-dashoffset: 0;
-    animation: messyy 0.5s ease forwards infinite alternate;
-}
+
 
 .sidebar--container{
     position: fixed;
@@ -549,6 +513,9 @@ footer p:nth-child(3){
     flex-direction: column;
     gap: 15px;
     padding: 1em;
+}
+.sidebar--container ul li{
+    cursor: url('./assets/blackpointer.png'),pointer;
 }
 
 @media only screen and (max-width:1500px){
@@ -574,6 +541,12 @@ footer p:nth-child(3){
     }
 }
 @media only screen and (max-width:1080px){
+    .project--tab{
+        height: 540px;
+    }
+    .project--tab-txt{
+        font-size: 1em;
+    }
     .loading--text{
         font-size: 2em;
     }
@@ -670,13 +643,4 @@ footer p:nth-child(3){
     }
 }
 
-@keyframes messy{
-    to{
-        stroke-dashoffset: 0;
-    }
-}
-@keyframes messyy{
-    to{
-        stroke-dashoffset: 4525;
-    }
-}
+  

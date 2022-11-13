@@ -10,30 +10,31 @@ meditationImg.addEventListener('click',()=>{
 
 const projectlinks = document.querySelectorAll('.project--content--name')
 const projectAtab = document.querySelectorAll('.project--tab--container')
+const projectTab = document.querySelectorAll('project--tab')
 
 projectlinks[0].addEventListener('click',()=>{
-    projectAtab[0].style.display = "grid";
+    projectAtab[0].style.transform = "translateY(0%)";
 })
 projectlinks[1].addEventListener('click',()=>{
-    projectAtab[1].style.display = "grid";
+    projectAtab[1].style.transform = "translateY(0%)";
 })
 projectlinks[2].addEventListener('click',()=>{
-    projectAtab[2].style.display = "grid";
+    projectAtab[2].style.transform = "translateY(0%)";
 })
 projectlinks[3].addEventListener('click',()=>{
-    projectAtab[3].style.display = "grid";
+    projectAtab[3].style.transform = "translateY(0%)";
 })
 document.getElementById('closeA').addEventListener('click',()=>{
-    projectAtab[0].style.display = "none";
+    projectAtab[0].style.transform = "translateY(100%)";
 })
 document.getElementById('closeB').addEventListener('click',()=>{
-    projectAtab[1].style.display = "none";
+    projectAtab[1].style.transform = "translateY(100%)";
 })
 document.getElementById('closeC').addEventListener('click',()=>{
-    projectAtab[2].style.display = "none";
+    projectAtab[2].style.transform = "translateY(100%)";
 })
 document.getElementById('closeD').addEventListener('click',()=>{
-    projectAtab[3].style.display = "none";
+    projectAtab[3].style.transform = "translateY(100%)";
 })
 
 const eyeball = document.querySelector('.hero--eyeball');
@@ -59,3 +60,4 @@ document.querySelectorAll('#backtotop').forEach(item => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     })
 })
+

@@ -2,7 +2,8 @@
 const preloader = document.querySelector('.loading--container')
 
 window.addEventListener('load',()=>{
-    preloader.style.transform = "translateX(-100%)"
+    preloader.style.animation = "loader 1.5s ease forwards"
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
 })
 
 const cursor = document.querySelector('.cursor');

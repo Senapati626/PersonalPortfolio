@@ -574,6 +574,9 @@ footer p:nth-child(3){
     }
 }
 @media only screen and (max-width:1080px){
+    .loading--text{
+        font-size: 2em;
+    }
     body{
         font-size: 14px;
     }
@@ -651,6 +654,9 @@ footer p:nth-child(3){
 @media only screen and (max-width:560px){
     body{
         font-size: 12px;
+    }
+    .cursor{
+        display: none;
     }
     .hero--container{
         padding-top: 5em;

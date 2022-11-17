@@ -61,3 +61,23 @@ document.querySelectorAll('#backtotop').forEach(item => {
     })
 })
 
+const menuBtn = document.getElementById('menuBtn');
+const closeBtn = document.getElementById('closeBtn');
+const sidebarLeft = document.querySelector('.sidebar--list')
+const sidebarRight = document.querySelector('.sidebar--links')
+const sidebarListItems = document.querySelectorAll('#sidebarList')
+menuBtn.addEventListener('click',()=>{
+    sidebarLeft.style.transform = "translateY(0%)";
+    sidebarRight.style.transform = "translateY(0%)";
+})
+closeBtn.addEventListener('click',()=>{
+    sidebarLeft.style.transform = "translateY(-100%)";
+    sidebarRight.style.transform = "translateY(100%)";
+})
+sidebarListItems.forEach(listItem =>{
+    listItem.addEventListener('click',()=>{
+        sidebarLeft.style.transform = "translateY(-100%)";
+        sidebarRight.style.transform = "translateY(100%)";
+    })
+})
+

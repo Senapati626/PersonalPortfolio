@@ -20,41 +20,32 @@
         </div>
     </div>
     <div class="cursor"></div>
+    <nav class="navbar--container">
+        <div class="scroll-progress-marker" id="progress-marker"></div>
+        <div class="scroll-progress cursor-scale cursor-small">
+            <p id="progress-value">0%</p>
+        </div>
+        <div class="hero--eye cursor-scale cursor-none">
+            <div class="hero--eyeball"></div>
+        </div>
+        <div class="navbar--logo">
+            <button class="cursor-none cursor-scale" id="menuBtn">Menu</button>
+            <span></span>
+        </div>
+    </nav>
     <section class="section first" id="firstSection">
-        <nav class="navbar--container">
-            <div class="navbar--logo">
-                <p class="cursor-none cursor-scale">Neellohit Senapati</p>
-            </div>
-            <div class="navbar--icons">
-                <a href="mailto:neellohitsenapati626@gmail.com"><img src="./assets/mail.svg" alt="mail" class="cursor-small cursor-scale"></a>
-                <a href="https://codepen.io/senapati626" target="_blank"><img src="./assets/codepen.svg" alt="codepen" class="cursor-small cursor-scale"></a>
-                <a href="https://www.linkedin.com/in/neellohit-senapati-9ba1451b4/" target="_blank"><img src="./assets/linkedin.svg" alt="linkedin" class="cursor-small cursor-scale"></a>
-                <a href="https://github.com/Senapati626" target="_blank"><img src="./assets/github.svg" alt="github" class="cursor-small cursor-scale"></a>
-            </div>
-            <div class="navbar--logo">
-                <a href="https://senapati626.github.io/PersonalPortfolio/about.html" class="cursor-none cursor-scale">About Me</a>
-                <span></span>
-            </div>
-        </nav>
         <div class="hero--container">
             <div class="hero--header--a">
-                <h1 class="cursor-scale">creative designer &</h1>
+                <h1 class="cursor-scale">creative designer</h1>
             </div>
             <div class="hero--header--b">
-                <h1 class="cursor-scale">web developer</h1>
-                <div class="hero--eye cursor-scale cursor-none">
-                    <div class="hero--eyeball"></div>
-                </div>
-            </div>
-            <div class="hero--scroll--icon">
-                <div class="spin">
-                </div>
+                <h1 class="cursor-scale">& {web} developer;</h1>
             </div>
         </div>
     </section>
-    <section class="section second">
+    <section class="section second" id="work">
         <div class="project--header">
-            <p class="cursor-scale">selected work</p>
+            <p class="cursor-scale">selected works</p>
         </div>
         <div class="section--separator"></div>
         <div class="project--item project--a">
@@ -142,7 +133,33 @@
             </div>
         </div>
     </section>
-    <section class="contact--section">
+    <section class="section third" id="about">
+        <div class="about--section">
+        <div class="about--left">
+            <div class="about--header">
+                <h1>fresh ideas for fresh businesses</h1>
+            </div>
+            <div class="about--text">
+                <p>
+                    Hi, I am Neellohit (aka "Neel Senpai"), a freelance creative designer cum web developer based in India. I spend most of my time either converting professional designs into rich web experiences or being a supporter of Borussia Dortmund and questioning my life choices regarding football.
+                </p>
+                <button class="resume--btn cursor-none cursor-scale">
+                    <p>Download Resume</p>
+                    <img src="./assets/download.svg" alt=""/>
+                </button>
+            </div>
+        </div>
+        <div class="about--right">
+            <svg width="268" height="236" viewBox="0 0 268 236" fill="none" xmlns="http://www.w3.org/2000/svg" id="mess--head">
+                <path id="messB" d="M171 11C157.214 32.007 142.74 52.5418 129.111 73.6667C118.775 89.6875 110.648 107.048 101.778 123.889C94.648 137.425 85.9399 149.927 78.6111 163.333C72.7098 174.128 66.333 184.685 61 195.778C57.658 202.729 53.211 210.199 52.2222 218C51.1957 226.098 52 234.781 52 242.944C52 250.003 53.5014 250.971 59.9444 253.944C63.8324 255.739 68.4951 255 72.6667 255C92.1906 255 110.581 249.516 129.667 245.778C158.5 240.131 187.175 232.634 214.444 221.556C232.201 214.342 251.357 207.35 267.833 197.5C287.815 185.555 306.211 172.461 319.556 153C324.503 145.785 325.377 143.299 319.778 137C311.961 128.206 303.372 123.675 292.278 119.944C274.716 114.039 257.516 108.084 239.389 104.056C198.768 95.0286 157.341 90.5652 116.222 84.5556C99.5795 82.1232 83.1593 79.2172 66.3889 77.8889C57.3668 77.1743 48.6858 75 39.6111 75C36.6904 75 37.9094 87.9919 38 90C38.5893 103.064 46.3831 115.428 55.7778 124.111C63.7142 131.446 74.3905 136.922 83.6111 142.5C97.5029 150.904 111.975 158.319 126 166.5C155.623 183.78 185.614 201.4 216.222 216.889C225.91 221.791 235.836 226.483 245.944 230.444C255.758 234.29 265.071 239.616 275.056 242.944C282.477 245.418 290.169 247.216 297.778 249C300.659 249.676 313.39 254.346 315.889 251.222C318.416 248.063 319.146 243.402 321.778 240C325.843 234.745 324.379 225.246 323.333 219.222C319.724 198.435 301.106 181.551 289.889 164.444C277.855 146.092 264.24 128.686 251.556 110.778C239.514 93.7775 225.873 78.205 214 61.0556C207.627 51.8496 200.122 43.1151 192 35.4444C187.685 31.3693 181.826 28.7147 177.611 24.5C174.838 21.7266 169.93 21.1096 166 22.4444C154.39 26.3875 143.46 41.3939 135.778 50.2222C125.655 61.855 116.261 74.0481 107.389 86.6667C98.2199 99.707 91.9788 114.397 83.2222 127.722C74.6678 140.74 70.5162 155.928 66.4444 170.778C63.8182 180.356 73.8218 183.753 81.2778 187.167C97.2924 194.499 115.059 198.205 131.889 203.222C147.321 207.823 162.068 213.027 177 219C194.919 226.168 213.742 232.929 229.444 244.444C235.641 248.988 231.111 260.378 225.778 264C218.153 269.177 208.04 271.379 199.389 274.111C191.57 276.58 184.115 280.101 176.056 281.778C165.498 283.974 154.476 284.588 143.722 284.889C115.576 285.676 82.1601 289.113 62.1111 265.556C57.1179 259.688 53.3244 253.37 50 246.444C46.5976 239.356 49.6689 231.23 52 224.111C54.2033 217.382 60.169 214.882 66.3889 212.444C81.892 206.369 97.9386 206.27 114.333 204.5C136.887 202.065 159.67 202.077 182 197.778C203.427 193.652 224.571 186.548 244.111 176.778C260.492 168.587 263 157.025 263 139.889C263 128.488 261.236 118.841 259.056 107.722C255.926 91.7632 253.371 75.6412 249 59.9444C246.584 51.2682 243.121 43.0105 241 34.2222C240.571 32.444 239.162 23.4897 236.889 23.2222C228.165 22.1958 217.134 26.8359 208.444 28.0556C185.688 31.2495 163.123 32 140.167 32C121.196 32 102.191 31.6582 83.2222 32C82.5446 32.0122 78.975 31.6735 80.8333 33.3889C86.127 38.2753 94.2868 41.3801 100.667 44.4444C124.711 55.9931 151.699 61.1777 177.111 68.8889C215.822 80.6357 253.958 93.0565 288.889 113.889C297.59 119.078 307.745 124.442 312 134.111C315.679 142.473 319.649 150.313 319.944 159.611C320.183 167.124 321.443 176.634 319.111 183.889C315.792 194.214 308.957 205.785 299.556 211.556C286.405 219.627 268.393 218.797 253.611 218.944C216.423 219.316 179.875 216.772 143.944 206.667C126.446 201.745 111.135 180.24 126.889 164.111C144.062 146.529 171.059 140.65 194.222 136.611C223.336 131.534 253.294 128.662 280.611 116.556C288.942 112.864 297.12 108.345 299.778 99C302.122 90.7556 302 81.9296 302 73.4444C302 56.7996 280.16 53.2495 267.222 49.4444C251.708 44.8815 236.115 40.575 220.611 36C215.612 34.5248 209.932 32.0281 204.889 31.1111C200.049 30.2311 194.902 34.0997 191.556 37.1111C183.317 44.5259 175.812 53.1089 169.556 62.2222C156.76 80.8594 140.646 99.4347 140.056 123.056C139.795 133.474 139.175 143.479 144.889 152.667C152.426 164.785 159.974 169.171 174 169.778C189.607 170.453 204.384 165.281 219.222 161.222C233.495 157.319 252.875 156.019 264.722 146.222C271.264 140.813 272.806 129.76 273.556 121.778C275.288 103.335 275.078 83.0591 273.111 64.6667C271.204 46.8273 268.161 28.9281 265.556 11.1667C264.658 5.04432 265.331 1.54646 258.556 2.11111C243.418 3.37256 229.261 11.9586 215.333 17.3333C196.69 24.528 177.99 31.3371 159.5 38.9444C139.729 47.0789 119.472 53.8805 99.7778 62.2222C77.9395 71.4722 56.1777 79.1423 33.4444 85.8889C25.3799 88.2822 -4.82211 93.9187 3.22222 108.667C18.6051 136.869 46.4048 157.718 74.2222 172.444C114.823 193.939 159.945 205.743 201.5 225.222C205.728 227.204 208.867 230.271 207.556 235.444C203.717 250.587 194.569 257 179 257" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                <path id="messA" d="M94 52C91.1328 54.007 89.4275 56.9863 87.5556 59.8889C82.6657 67.4709 77.12 74.7761 72.8333 82.7222C65.4862 96.3414 58.5637 111.097 53.0556 125.556C48.5756 137.315 45.77 148.014 48.1111 160.556C49.7657 169.42 52.9314 180.865 61 186C68.2999 190.645 75.7523 190.239 84.2222 189.556C99.9249 188.288 117.691 185.266 132 178.111C141.191 173.515 149.42 165.916 156.667 158.778C163.139 152.402 170.279 146.891 176 139.778C180.344 134.377 185.298 124.929 180.889 118C173.724 106.741 162.107 101.054 151.722 93.3889C142.464 86.5557 131.898 83.3082 121.222 79.4444C115.901 77.5187 110.812 75.3798 105.611 73.1667C100.604 71.0358 95.0172 70.8751 89.7778 69.5556C78.7289 66.7729 68.0349 63.7974 56.7778 62C47.3239 60.4906 38.3307 59.8125 28.8889 58.7778C25.2057 58.3741 21.7137 58 18 58C11.9944 58 14 66.8542 14 70.8889C14 82.0068 15.86 88.2532 23.1667 96.7222C34.3331 109.665 47.156 118.034 61.5556 127.056C76.8441 136.634 91.0861 147.459 106 157.556C115.674 164.105 125.509 172.735 136.222 177.556C147.45 182.608 159.894 180.144 169.778 173.556C187.305 161.871 185 141.832 185 123.222C185 113.515 185.667 103.749 182.889 94.3333C178.943 80.9606 172.648 68.5772 167.389 55.7222C162.423 43.5833 156.5 30.7621 148.333 20.3889C144.445 15.4501 137.331 3.57353 130.5 2.05556C123.685 0.541211 116.166 5.39134 111 9.11111C102.919 14.9293 94.0567 20.702 89.6667 29.8333C85.9444 37.5757 86.8363 46.4528 85.5556 54.7778C83.5775 67.6353 81.837 80.7256 78.5556 93.3333C75.1017 106.604 70.2593 120.219 64.2222 132.556C60.1247 140.929 56.2007 150.917 50.2222 158.111C46.2027 162.948 43.6127 164.447 37.5556 166C25.9653 168.972 21.3636 159.635 16.0556 150.556C7.69225 136.25 2.73602 121.994 2.11112 105.278C1.80763 97.1594 2.00001 89.0121 2.00001 80.8889C2.00001 79.6362 1.67267 77.7613 2.11112 76.5556C3.10242 73.8295 7.04284 74 9.22223 74C19.247 74 26.685 75.2556 35.7778 80.4444C55.9199 91.9386 70.4833 111.154 88.2222 125.778C104.947 139.566 123.953 150.151 141.222 163.222C151.805 171.232 163.319 177.675 175.111 183.722C183.93 188.245 193.188 192.909 203.111 194.333C214.291 195.938 229.924 196.797 241 193.556C266.036 186.228 268.776 161.264 265.111 139C261.617 117.774 251.945 95.8766 237.056 80.1111C231.513 74.2428 225.114 70.4689 216.611 72.3889C205.931 74.8006 195.265 81.1384 185.333 85.5556C169.455 92.6178 153.326 99.186 137.667 106.722C115.059 117.602 91.7677 129.787 67.6111 136.944C54.6635 140.781 41.6356 142.869 28.1111 143C17.2962 143.105 12.1066 141.283 10.4445 129.556C8.5079 115.892 8.92685 99.214 10.4445 85.5556C11.9627 71.8918 18.9433 58.3218 31.7778 52.2222C42.8515 46.9595 54.8463 47.3088 66.5 50.2222C86.4437 55.2082 106.322 62.2055 123.889 73.0556C138.761 82.2414 151.639 96.0985 165.444 106.889C175.949 115.1 194.205 122.687 200.444 135.167C202.834 139.946 204.196 145.183 206.222 150.111C207.742 153.807 210.071 157.335 209.833 161.5C209.555 166.372 205.84 170.033 202.556 173.222C196.697 178.912 191.379 184.962 185.944 191.056C176.734 201.383 167.573 212.584 159.889 224.111C157.661 227.452 155.383 234.495 150.833 233.889C142.388 232.763 135.338 224.285 131.556 217.333C122.641 200.949 117.13 183.347 119.444 164.444C120.707 154.131 128.728 146.607 133.833 138C139.017 129.262 144.181 121.73 150.889 114.111C161.423 102.147 172.465 89.2975 179.778 75C184.678 65.419 189.339 55.0027 189.944 44.1111C190.075 41.7632 190.919 36.8168 189.889 34.5C187.499 29.1234 169.571 31.7402 165.444 31.2778C148.946 29.4288 132.427 25.8512 116.222 22.3333C98.3863 18.4613 80.6273 15.5626 62.6667 12.4444C54.2709 10.9869 45.1734 6.73886 36.5556 7C28.4056 7.24697 40.2159 21.3355 41.7778 23C58.2472 40.5513 78.5288 50.7763 101.778 56C125.211 61.2651 150.513 62.2832 172.889 71.6667C203.105 84.3378 223.179 107.599 230 140C232.382 151.313 233.662 162.455 232.889 174.056C231.394 196.479 209.755 199.313 191.111 200.333C159.13 202.084 127.235 200.851 95.5556 196.222C85.3607 194.733 75.1743 193.229 65.2222 190.5C60.6612 189.249 56.3376 187.038 51.6667 186.222C44.6851 185.003 46 178.834 46 172.556C46 161.555 48.8894 151.427 58.7778 145C77.5629 132.79 103.624 131.912 124.556 125.056C149.51 116.881 175.046 109.674 193.667 90.1667C204.61 78.7023 216.451 66.9371 222.889 52.2222C225.577 46.0787 222.802 40.4364 217.5 36.5C200.742 24.0581 177.431 19.0473 157.333 15.2222C122.984 8.68474 85.9514 11.1001 51.1111 11C42.7974 10.9761 42.0984 10.9657 34.1111 10.7778C31.3441 10.7127 23.8181 9.30574 21.1667 11.5C18.4743 13.7282 19.9188 23.2874 20 26.3333C20.5932 48.5771 32.8677 67.1512 37.5556 88.3333C42.9344 112.638 39.764 136.84 42.6667 161.222C43.4136 167.496 45.6563 173.383 45.9445 179.722C46.0398 181.819 45.6633 183.78 46.6667 185.667C52.9913 197.557 60.0295 211.77 74 216.222C84.8197 219.67 97.5076 220.234 108.611 217.833C121.317 215.086 130.943 202.84 140.611 195.056C156.258 182.457 176.35 174.65 190.5 160.5C192.892 158.108 197.038 159 200.222 159C209.074 159 216.831 160.064 225 163.778C229.279 165.723 231.594 169.659 233.444 173.944C235.71 179.191 241.297 184.174 241.944 190C242.54 195.36 233.454 203.435 229.889 207C223.529 213.359 212.752 217 204 217C192.016 217 180.311 219.2 171.111 210C167.138 206.026 165.064 200.314 162.222 195.556C157.228 187.193 155.171 177.397 152.222 168.222C147.015 152.024 145.078 135.634 143 118.778C141.96 110.341 142 101.972 142 93.5C142 91.1325 144.375 90.1891 145 88C145.876 84.9344 147.049 83.5235 148.5 80.9444C149.578 79.0287 149.175 75.4285 150.444 74C151.839 72.4306 153.059 70.2974 153.778 68.2222C155.76 62.4947 158.419 55.8159 161.778 50.7778C164.243 47.0799 166.326 44.8899 169.556 42C175.05 37.0841 182.345 35.9483 188 31" stroke="black" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span class="about--right--tooltip">Psst! My head is a messy breeding ground for rich and novel ideas.</span>
+            <img src="./assets/body.png" alt="" class="cursor-scale"/>
+        </div>
+    </div>
+    </section>
+    <section class="contact--section" id="contact">
         <div class="contact--left">
             <div class="meditation--img cursor-scale">
                 <img src="./assets/meditation.gif" alt=""/>
@@ -157,19 +174,27 @@
             </div>
         </div>
         <div class="contact--right">
-            <p class="contact--right-a">Something in your mind?</p>
-            <p class="contact--right-b">Let's Talk</p>
+            <p class="contact--right-a">Got something awesome in mind?</p>
+            <p class="contact--right-b">Let me in :)</p>
             <form class="contact--form cursor-none cursor-scale">
-                <input type="email" name="" id="" placeholder="Your email">
-                <textarea placeholder="Drop me a message" rows="5"></textarea>
+                <input type="email" name="" id="" placeholder="Drop your email">
+                <textarea placeholder="Put a message" rows="5"></textarea>
                 <input type="submit" value="send"/>
             </form>
         </div>
     </section>
     <footer>
-        <a href="https://www.flaticon.com/free-icons/cursor" title="cursor icons">Cursor icons created by Cuputo & Freepik- Flaticon</a>
-        <p>2022 &copy; by Neellohit Senapati. All rights reserved</p>
-        <p style="cursor: url(./assets/blackpointer.png),pointer;" id="backtotop">back to top &uparrow;</p>
+        <div class="footer--left">
+            <!-- <a href="https://www.flaticon.com/free-icons/cursor" title="cursor icons" id="cursor-ref">Cursor icons created by Cuputo & Freepik- Flaticon</a> -->
+            <a href="mailto:neellohitsenapati626@gmail.com"><img src="./assets/mail.svg" alt="mail" class="cursor-small cursor-scale"></a>
+            <a href="https://codepen.io/senapati626" target="_blank"><img src="./assets/codepen.svg" alt="codepen" class="cursor-small cursor-scale"></a>
+            <a href="https://www.linkedin.com/in/neellohit-senapati-9ba1451b4/" target="_blank"><img src="./assets/linkedin.svg" alt="linkedin" class="cursor-small cursor-scale"></a>
+            <a href="https://github.com/Senapati626" target="_blank"><img src="./assets/github.svg" alt="github" class="cursor-small cursor-scale"></a>
+        </div>
+        <div class="footer--right">
+            <p style="cursor: url(./assets/blackpointer.png),pointer;" id="backtotop">back to top &uparrow;</p>
+            <p class="cursor-scale cursor-small">&copy; Neellohit Senapati</p>
+        </div>
     </footer>
     <div class="project--tab--container">
         <div class="project--tab">
@@ -243,14 +268,25 @@
             </div>
         </div>
     </div>
-    <section class="sidebar--container">
-        <ul>
-            <li><a href="mailto:neellohitsenapati626@gmail.com"><img src="./assets/mail.svg" alt="mail" class="cursor-small cursor-scale"></a></li>
-            <li><a href="https://codepen.io/senapati626" target="_blank"><img src="./assets/codepen.svg" alt="codepen" class="cursor-small cursor-scale"></a></li>
-            <li><a href="https://www.linkedin.com/in/neellohit-senapati-9ba1451b4/" target="_blank"><img src="./assets/linkedin.svg" alt="linkedin" class="cursor-small cursor-scale"></a></li>
-            <li><a href="https://github.com/Senapati626" target="_blank"><img src="./assets/github.svg" alt="github" class="cursor-small cursor-scale"></a></li>
-        </ul>
-    </section>
+    <div class="sidebar--list">
+            <a href="#firstSection" class="cursor-scale cursor-small" id="sidebarList">home</a>
+            <a href="#work" class="cursor-scale cursor-small" id="sidebarList">work</a>
+            <a href="#about" class="cursor-scale cursor-small" id="sidebarList">about</a>
+            <a href="#contact" class="cursor-scale cursor-small" id="sidebarList">contact</a>
+            <div class="sidebar--functions--left cursor-scale cursor-small">
+                <p>Neellohit Senapati</p>
+                <p>Available for freelancing work</p>
+            </div>
+    </div>
+    <div class="sidebar--links">
+            <a href="https://codepen.io/senapati626">codepen<span></span></a>
+            <a href="https://www.linkedin.com/in/neellohit-senapati-9ba1451b4/">linkedin<span></span></a>
+            <a href="https://github.com/Senapati626">github<span></span></a>
+            <div class="sidebar--functions--right">
+                <button class="cursor-none cursor-scale" id="closeBtn">Close</button>
+                <span></span>
+            </div>
+    </div>
     <script src="loadcursorscript.js"></script>
     <script src="scrollscript.js"></script>
     <script src="clickscript.js"></script>

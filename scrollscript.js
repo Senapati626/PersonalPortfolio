@@ -87,3 +87,14 @@ const setupScrollAnimation = ()=>{
 }
 
 setupScrollAnimation()
+
+let scrollPercentage = ()=>{
+    let progressValue = document.getElementById('progress-value');
+    let progressMarker = document.getElementById('progress-marker')
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight-document.documentElement.clientHeight;
+    let scrollValue = Math.round(pos*100/calcHeight)
+    progressValue.innerHTML = scrollValue+'%'
+    progressMarker.style.transform = 'scaleX('+scrollValue/100+')'
+}
+window.onscroll = scrollPercentage

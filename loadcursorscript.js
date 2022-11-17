@@ -1,9 +1,15 @@
 
 const preloader = document.querySelector('.loading--container')
+const headerA = document.querySelector('.hero--header--a h1')
+const headerB = document.querySelector('.hero--header--b h1')
 
 window.addEventListener('load',()=>{
     preloader.style.animation = "loader 1.5s ease forwards"
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    headerA.classList.add('slide-in-bottom')
+    headerB.classList.add('slide-in-top')
+    document.getElementById('progress-value').classList.add('text-focus-in')
+    document.getElementById('menuBtn').classList.add('text-focus-in')
 })
 
 const cursor = document.querySelector('.cursor');

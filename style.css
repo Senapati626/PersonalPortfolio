@@ -1,18 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Libre+Bodoni&family=Lobster+Two:wght@400&family=Parisienne&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster+Two&family=Orbitron:wght@900&family=Poppins:wght@300;500&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
-
+@-moz-document url-prefix(){
+    html{
+        scrollbar-width: none;
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
 body{
-    font-size: 16px;
+    font-size: 14px;
     overflow-x:hidden;
-    font-family: Helvetica,sans-serif;
+    font-family: 'Poppins',sans-serif;
     background-color: #f7dfa8;
     cursor: url('./assets/blackcursor.png'),default;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
 }
 .loading--container{
     position: fixed;
@@ -60,6 +73,9 @@ body{
         stroke-dashoffset: 0;
     }
 }
+#logo--svg{
+    transform: scale(0.5);
+}
 .section{
     min-height: 90vh;
     position: relative;
@@ -85,7 +101,8 @@ body{
     border: none;
 }
 .cursor-grow-small{
-    transform: scale(1.25);
+    transform: scale(2.5);
+    background-color: #efefef;
 }
 .cursor-display-none{
     transform: scale(0);
@@ -96,28 +113,46 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background-color: rgba(247, 223, 168,0.7);
+    z-index: 20;
+}
+.scroll-progress-marker{
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
 }
 .navbar--logo{
-    font-family: 'Parisienne',cursive;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    display: grid;
+    display: flex;
+    flex-direction: column;
 }
 .navbar--logo:hover span{
     transform: scaleX(1);
 }
-.navbar--logo a{
-    text-decoration: none;
+.navbar--logo button{
     color: #000;
     cursor: url('./assets/blackpointer.png'),default;
+    font-size: 2.5em;
+    background:transparent;
+    border: none;
+    font-weight: bold;
+    font-family: 'Poppins',sans-serif;
 }
 .navbar--logo span{
     width: 100%;
-    height: 2px;
+    height: 4px;
     background-color: #000;
     transform: scaleX(0);
+    transform-origin: 0% 50%;
+    margin-top: -5px;
     transition: transform 0.3s ease;
 }
 .navbar--icons{
@@ -129,18 +164,126 @@ body{
 .navbar--icons a{
     cursor: url('/assets/blackpointer.png'),pointer;
 }
+.sidebar--list{
+    width: 50%;
+    display: flex;
+    background-color: #000;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 99;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(-100%);
+}
+.sidebar--list a{
+    text-decoration: none;
+    color: #efefef;
+    font-size: 4em;
+    cursor: url('./assets/blackpointer.png'),pointer;
+}
+.sidebar--links{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
+    justify-content: flex-end;
+    background-color: #efefef;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    height: 100vh;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(100%);
+}
+.sidebar--links a{
+    text-decoration: none;
+    color: #000;
+    font-size: 2em;
+    cursor: url('./assets/blackpointer.png'),pointer;
+    width: fit-content;
+    position: relative;
+}
+.sidebar--links a span{
+    width: 100%;
+    height: 3px;
+    background-color: #0e0e0e;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    transform-origin: left;
+}
+.sidebar--links a:hover span{
+    transform: scaleX(1);
+}
+.sidebar--functions--left{
+    color: #efefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    padding: 2em;
+    top: 0;
+    left:0;
+
+}
+.sidebar--functions--right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.25rem 2rem;
+    font-size: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.sidebar--functions--right button{
+    font-weight: bold;
+    font-size: 1.5em;
+    background:transparent;
+    border: none;
+    font-family: 'Poppins',sans-serif;
+    cursor: url('./assets/blackpointer.png'),pointer;
+}
+.sidebar--functions--right span{
+    background-color: #000;
+    width: 100%;
+    height: 4px;
+    margin-top: -10px;
+    transform-origin: 0% 0%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.sidebar--functions--right:hover span{
+    transform: scaleX(1);
+}
+.sidebar--functions--left p:nth-child(1){
+    font-size: 1.5em;
+}
+.sidebar--functions--left p:nth-child(2){
+    font-weight: 300;
+}
 
 .hero--container{
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding-top: 200px;
     position: relative;
 }
 .hero--header--a{
-    font-family: 'Libre Bodoni',serif;
+    font-family: 'Orbitron',sans-serif;
     text-transform: uppercase;
-    font-size: 5rem;
+    font-size: 4em;
     font-weight: 600;
     padding: 0.25rem 2.5rem;
     display: flex;
@@ -153,9 +296,9 @@ body{
 }
 .hero--header--b{
     width: 100%;
-    font-family: 'EB Garamond',serif;
+    font-family: 'Bebas Neue',serif;
     text-transform: uppercase;
-    font-size: 6.5rem;
+    font-size: 6.5em;
     padding: 0.25rem 2.5rem;
     font-weight: 600;
     display: flex;
@@ -170,15 +313,15 @@ body{
     right: 5%;
 }
 .hero--eye{
-    width: 80px;
-    height: 80px;
-    border: 6px solid black;
+    width: 50px;
+    height: 50px;
+    border: 4px solid black;
     border-radius: 75% 15%;
     position: relative;
     transform: rotate(45deg);
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+
     overflow: hidden;
 }
 .hero--eyeball{
@@ -187,8 +330,8 @@ body{
     top: 50%;
     left: 30px;
     transform: translate(-50%,-50%);
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 4px solid black;
     box-sizing: border-box;
@@ -214,10 +357,15 @@ body{
     background-color: white;
     height: min-content;
 }
-
+.scroll-progress{
+   font-size: 2.5em; 
+   font-weight: bold;
+   width: 60px;
+}
 .project--header{
     width: 100%;
-    font-size: 4rem;
+    font-size: 6rem;
+    font-family: sans-serif;
     font-weight: 1000;
     text-transform: uppercase;
     display: flex;
@@ -288,7 +436,7 @@ body{
     position: relative;
 }
 .project--content--name{
-    font-family: 'EB Garamond',serif;
+    font-family: 'Bebas Neue',sans-serif;
     font-size: 2.5em;
     text-transform: uppercase;
     cursor: url('./assets/blackpointer.png'), pointer;
@@ -310,18 +458,119 @@ body{
 .project--content:hover .project--content--img{
     display: block;
 }
-.contact--section{
+
+.about--header{
     display: flex;
     justify-content: center;
+    font-family: 'Orbitron',sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+}
+.about--section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.about--left{
+    width: 100%;
+    padding: 1em 2.5em;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.about--text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 1.5rem;
+}
+.resume--btn{
+    padding: 15px 30px;
+    border: none;
+    background-color: #000;
+    color: #efefef;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    font-family: 'Bebas Neue',sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: url('./assets/blackpointer.png'),pointer;
+    width: fit-content;
+}
+.about--right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
+}
+.about--right img{
+    width: 100%;
+    max-width: 500px;
+    margin-top: 125px;
+}
+#mess--head{
+    position: absolute;
+    width: 180px;
+    top: -7%;
+    left: 45%;
+}
+.about--right--tooltip{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    padding: 5px 10px;
+    background-color: #0e0e0e;
+    color: #efefef;
+    border-radius: 5px;
+    transform: scale(0);
+    transform-origin: 100% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+#mess--head:hover +.about--right--tooltip{
+    transform: scale(1);
+}
+#messA{
+    stroke-dasharray: 4316;
+    stroke-dashoffset: 4316;
+    animation: messy 0.5s ease forwards infinite alternate;
+}
+#messB{
+    stroke-dasharray: 4525;
+    stroke-dashoffset: 0;
+    animation: messyy 0.5s ease forwards infinite alternate;
+}
+@keyframes messy{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes messyy{
+    to{
+        stroke-dashoffset: 4525;
+    }
+}
+.contact--section{
+    display: flex;
+    justify-content: space-evenly;
     position: relative;
     margin: 2.5rem 0;
-    gap: 3em;
+    gap: 50px;
 }
 .contact--left{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 600px;
+    height: 600px;
+    max-width: 500px;
 }
 .meditation--img img{
     cursor: url('./assets/blackpointer.png'),pointer;
@@ -336,7 +585,6 @@ body{
 }
 .contact--right-a{
     font-size: 2.2rem;
-    font-family: 'EB Garamond',serif;
 }
 .contact--right-b{
     font-size: 3rem;
@@ -351,11 +599,11 @@ body{
 }
 .contact--mail{
     display: flex;
-    width: 360px;
+    width: fit-content;
     font-size: 1.5rem;
     gap: 5px;
-    background-color: white;
-    padding: 0.25em 0.5em;
+    background-color: #efefef;
+    padding: 0.25em 1em;
     border-radius: 10px;
     justify-content: space-between;
 }
@@ -367,29 +615,26 @@ body{
     align-items: flex-end;
     cursor: url('./assets/blackpointer.png'), pointer;
 }
-.contact--mail p{
-    font-family: 'EB Garamond',serif;
-}
+
 .contact--form{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 .contact--form textarea{
     resize: none;
     background:transparent;
     font-size: 1.25rem;
-    padding: 5px;
-    border: 2px solid black;
-    font-family: 'Libre Bodoni',serif;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
 }
 .contact--form input[type="email"]{
     font-size: 1.25rem;
-    padding: 5px;
+    padding: 10px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid black;
-    font-family: 'Libre Bodoni',serif;
+    border-bottom: 3px solid black;
 }
 .contact--form input[type="email"]:focus{
     outline: none;
@@ -398,6 +643,7 @@ body{
     padding: 0.5rem 1rem;
     background-color: black;
     color: white;
+    border-radius: 10px;
     text-transform: uppercase;
     font-size: 1.25rem;
     cursor: url('./assets/blackpointer.png'),pointer;
@@ -405,17 +651,50 @@ body{
 footer{
     display: flex;
     padding: 1rem 2.5rem;
-    color: #733c29;
-    font-size: 14px;
+    color: #efefef;
+    background-color: #0e0e0e;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1em;
+    position: relative;
 }
-footer p:nth-child(3){
+#cursor-ref{
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    text-decoration: none;
+    color: #efefef;
+    font-size: 0.5rem;
+}
+
+.footer--left{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1.5em;
+    gap: 2em;
+}
+.footer--left a{
+    background-color: #efefef;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    cursor: url('./assets/blackpointer.png'),pointer;
+}
+.footer--right{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-end;
+}
+.footer--right p:nth-child(1){
     text-transform: uppercase;
+    font-size: 1.5rem;
 }
-
-
+.footer--right p:nth-child(2){
+    font-size: 3rem;
+}
 .project--tab--container{
     position: fixed;
     top: 0;
@@ -443,7 +722,7 @@ footer p:nth-child(3){
     padding: 15px 10px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
     overflow: hidden;
     position: relative;
     -webkit-box-shadow: 10px 10px 25px 0px rgba(148,146,142,1);
@@ -460,15 +739,14 @@ footer p:nth-child(3){
 .project--tab-name{
     text-align: center;
     color: #fb7667;
-    font-family: 'EB Garamond',serif;
-    font-size: 2.4em;
+    font-family: 'Bebas Neue',sans-serif;
+    font-size: 2.5em;
     text-transform: uppercase;
 }
 .project--tab-txt{
     color: #b0f9b6;
-    font-size: 1.25em;
-    font-family: sans-serif;
     margin: 0 1em;
+    font-weight: 300;
 
 }
 .project--tab-links{
@@ -498,25 +776,128 @@ footer p:nth-child(3){
     cursor: url('./assets/blackpointer.png'), pointer;
 }
 
+.slide-in-top {
+	-webkit-animation: slide-in-top 1s linear both;
+	        animation: slide-in-top 1s linear both;
+}
+.slide-in-bottom {
+	-webkit-animation: slide-in-bottom 1s linear ;
+	        animation: slide-in-bottom 1s linear ;
+}
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2022-11-16 15:47:20
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
 
-.sidebar--container{
-    position: fixed;
-    top: 50%;
-    right: 0;
-    background-color: aliceblue;
-    border-radius: 10px 0 0 10px;
-    display: none;
-}
-.sidebar--container ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 1em;
-}
-.sidebar--container ul li{
-    cursor: url('./assets/blackpointer.png'),pointer;
-}
+/**
+ * ----------------------------------------
+ * animation slide-in-bottom
+ * ----------------------------------------
+ */
+ /* ----------------------------------------------
+ * Generated by Animista on 2022-11-16 16:0:42
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-500px);
+              transform: translateY(-500px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-500px);
+              transform: translateY(-500px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+ @-webkit-keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(500px);
+              transform: translateY(500px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(500px);
+              transform: translateY(500px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+/* ----------------------------------------------
+ * Generated by Animista on 2022-11-16 15:57:16
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
 
 @media only screen and (max-width:1500px){
     .hero--header--a{
@@ -532,6 +913,27 @@ footer p:nth-child(3){
         height: auto;
     }
 }
+@media only screen and (min-width:1280px){
+    .about--section{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .about--left{
+        width: 50%;
+        align-items: center;
+    }
+    .about--right{
+        width: 40%;
+    }
+    .sidebar--list{
+        width: 25%;
+        left: 50%;
+    }
+    .sidebar--links{
+        width: 25%;
+    }
+}
 @media only screen and (max-width:1300px){
     .hero--header--a{
         font-size: 3.5rem;
@@ -541,6 +943,14 @@ footer p:nth-child(3){
     }
 }
 @media only screen and (max-width:1080px){
+    .loading--text{
+        display: none;
+    }
+    .loading--container svg{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
     .project--tab{
         height: 540px;
     }
@@ -578,14 +988,6 @@ footer p:nth-child(3){
     .project--item{
         width: 90%;
     }
-    .hero--eye{
-        width: 60px;
-        height: 60px;
-    }
-    .hero--eyeball{
-        width: 35px;
-        height: 35px;
-    }
     .project--header{
         font-size: 3.5em;
         justify-content: flex-start;
@@ -600,6 +1002,15 @@ footer p:nth-child(3){
     }
     .meditation--img img{
         width: 250px;
+    }
+    .hero--eye{
+        display: none;
+    }
+    .sidebar--container{
+        width: 100%;
+    }
+    .footer--left,.footer--right{
+        width: 100%;
     }
 }
 

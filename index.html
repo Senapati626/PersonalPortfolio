@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0">
     <title>Neellohit Senapati | Welcome to my portfolio</title>
-    <link rel="stylesheet" href="stylemin.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster+Two&family=Orbitron:wght@900&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js" integrity="sha512-5T245ZTH0m0RfONiFm2NF0zcYcmAuNzcGyPSQ18j8Bs5Pbfhp5HP1hosrR8XRt5M3kSRqzjNMYpm2+it/AUX/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
@@ -23,6 +24,7 @@
         </div>
     </div>
     <div class="cursor"></div>
+    <canvas id="canvas"></canvas>
     <nav class="navbar--container">
         <div class="scroll-progress-marker" id="progress-marker"></div>
         <div class="scroll-progress cursor-scale cursor-small">
@@ -43,6 +45,9 @@
             </div>
             <div class="hero--header--b">
                 <h1 class="cursor-scale">& {web} developer;</h1>
+            </div>
+            <div class="hero--header--btn">
+                <img src="./assets/bomb.svg" alt="" class="cursor-scale cursor-small"/>
             </div>
         </div>
     </section>
@@ -293,5 +298,6 @@
     <script src="loadcursorscript.js"></script>
     <script src="scrollscript.js"></script>
     <script src="clickscript.js"></script>
+    <script src="matter.js"></script>
 </body>
 </html>

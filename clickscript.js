@@ -9,32 +9,32 @@ meditationImg.addEventListener('click',()=>{
 })
 
 const projectlinks = document.querySelectorAll('.project--content--name')
-const projectAtab = document.querySelectorAll('.project--tab--container')
+const projectAtab = document.querySelectorAll('.project--container')
 const projectTab = document.querySelectorAll('project--tab')
 
 projectlinks[0].addEventListener('click',()=>{
-    projectAtab[0].style.transform = "translateY(0%)";
+    projectAtab[0].style.transform = "translateX(0%)";
 })
 projectlinks[1].addEventListener('click',()=>{
-    projectAtab[1].style.transform = "translateY(0%)";
+    projectAtab[1].style.transform = "translateX(0%)";
 })
 projectlinks[2].addEventListener('click',()=>{
-    projectAtab[2].style.transform = "translateY(0%)";
+    projectAtab[2].style.transform = "translateX(0%)";
 })
 projectlinks[3].addEventListener('click',()=>{
-    projectAtab[3].style.transform = "translateY(0%)";
+    projectAtab[3].style.transform = "translateX(0%)";
 })
 document.getElementById('closeA').addEventListener('click',()=>{
-    projectAtab[0].style.transform = "translateY(100%)";
+    projectAtab[0].style.transform = "translateX(-100%)";
 })
 document.getElementById('closeB').addEventListener('click',()=>{
-    projectAtab[1].style.transform = "translateY(100%)";
+    projectAtab[1].style.transform = "translateX(-100%)";
 })
 document.getElementById('closeC').addEventListener('click',()=>{
-    projectAtab[2].style.transform = "translateY(100%)";
+    projectAtab[2].style.transform = "translateX(-100%)";
 })
 document.getElementById('closeD').addEventListener('click',()=>{
-    projectAtab[3].style.transform = "translateY(100%)";
+    projectAtab[3].style.transform = "translateX(-100%)";
 })
 
 const eyeball = document.querySelector('.hero--eyeball');

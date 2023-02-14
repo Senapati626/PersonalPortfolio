@@ -2,7 +2,6 @@
 gsap.registerPlugin(ScrollTrigger)
 
 const setupScrollAnimation = ()=>{
-    const projectA = document.querySelector('#firstPointer')
     const tl = gsap.timeline()
 
     tl.to('#firstPointer',{scaleX:1,
@@ -75,15 +74,34 @@ const setupScrollAnimation = ()=>{
             end:"+=500",
             scrub:2,
     }},2)
-
-    tl.to('.hero--scroll--icon',{rotate:720,
+    tl.to('#firstworkflow',{rotate: 0, opacity: 1,
         scrollTrigger:{
-            trigger: 'first',
-            start:'top top',
-            end: "+=1000",
-            scrub:true
-        }
-    })
+            trigger:"#firstworkflow",
+            start:"top bottom",
+            end:"+=500",
+            scrub:2,
+    }},2)
+    tl.to('#secondworkflow',{rotate: 0, opacity: 1,
+        scrollTrigger:{
+            trigger:"#secondworkflow",
+            start:"top bottom",
+            end:"+=500",
+            scrub:2,
+    }},2)
+    tl.to('#thirdworkflow',{rotate: 0, opacity: 1,
+        scrollTrigger:{
+            trigger:"#thirdworkflow",
+            start:"top bottom",
+            end:"+=500",
+            scrub:2,
+    }},2)
+    tl.to('#fourthworkflow',{rotate: 0, opacity: 1,
+        scrollTrigger:{
+            trigger:"#fourthworkflow",
+            start:"top bottom",
+            end:"+=500",
+            scrub:2,
+    }},2)
 }
 
 setupScrollAnimation()

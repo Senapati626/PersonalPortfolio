@@ -638,6 +638,7 @@ body::-webkit-scrollbar{
     padding: 10px;
     border: 3px solid black;
     border-radius: 10px;
+    font-family: inherit;
 }
 .contact--form input[type="email"]{
     font-size: 1.25rem;
@@ -649,14 +650,14 @@ body::-webkit-scrollbar{
 .contact--form input[type="email"]:focus{
     outline: none;
 }
-.contact--form input[type="submit"]{
+.contact--form button{
     padding: 0.5rem 1rem;
     background-color: black;
     color: white;
     border-radius: 10px;
-    text-transform: uppercase;
     font-size: 1.25rem;
     cursor: url('./assets/blackpointer.png'),pointer;
+    border: none;
 }
 footer{
     display: flex;
